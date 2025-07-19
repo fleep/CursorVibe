@@ -12,6 +12,6 @@ RUN poetry install --no-root --no-interaction --no-ansi
 # Copy the rest of the app
 COPY . .
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD ["poetry", "run", "python", "main.py", "--host", "0.0.0.0", "--port", "8080"] 
+CMD ["poetry", "run", "python", "main.py", "--port", "80"] 

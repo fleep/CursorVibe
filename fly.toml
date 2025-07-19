@@ -26,13 +26,4 @@ PORT = "8080"
     interval = 10000
     timeout = 2000
     grace_period = "5s"
-    restart_limit = 0
-
-[build]
-  image = "python:3.12-slim"
-
-[deploy]
-  release_command = "poetry install --no-interaction --no-root"
-
-[processes]
-  app = "poetry run python main.py --host 0.0.0.0 --port 8080" 
+    restart_limit = 0 
